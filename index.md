@@ -1,8 +1,8 @@
 
 <!DOCTYPE html> 
-<html> 
+
 <head> 
-    <title>Home Questionnaire...the GifTastic Sequel<span id="selection-marker-1" class="redactor-selection-marker"></span></title> 
+    <title>Home Questionnaire...the GifTastic Sequel!<span id="selection-marker-1" class="redactor-selection-marker"></span></title> 
 
 <!--Segment Analytics.js --> 
 <script>
