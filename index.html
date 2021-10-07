@@ -9,7 +9,9 @@
       analytics.load("iXqFt06oxLQVb1FZYFKQJjYfVW3RWjN9");
       analytics.page();
       }}();
-    analytics.timeout(500);
+        analytics.ready(function(){
+            analytics.timeout(500);
+        });
 </script>
     
     <!-- Global site tag (gtag.js) - Google Analytics 
