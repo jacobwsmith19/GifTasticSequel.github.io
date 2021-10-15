@@ -11,7 +11,11 @@
       }}();
 </script>
     
-    <script>analytics.timeout(400);</script>
+<script>
+analytics.ready(function() {
+analytics.timeout(400);
+});
+</script>
     
     <!-- Global site tag (gtag.js) - Google Analytics 
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-196246705-1"></script>
