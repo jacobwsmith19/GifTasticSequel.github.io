@@ -93,29 +93,30 @@ src="https://www.facebook.com/tr?id=128457189376631&ev=PageView&noscript=1"
         });
       }
  
-     <!--ctrl+c listener -->
-        
-stage.addEventListener(KeyboardEvent.KEY_DOWN,onkeydown)
-
-function onkeydown(e:KeyboardEvent){
-    if(e.ctrlKey){
-        stage.addEventListener(KeyboardEvent.KEY_UP,onkeyup)
+document.body.addEventListener("keydown", function (ev) {
+  
+    // function to check the detection
+    ev = ev || window.event;  // Event object 'ev'
+    var key = ev.which || ev.keyCode; // Detecting keyCode
+      
+    // Detecting Ctrl
+    var ctrl = ev.ctrlKey ? ev.ctrlKey : ((key === 17)
+        ? true : false);
+  
+    // If key pressed is V and if ctrl is true.
+    if (key == 86 && ctrl) {
+        // print in console.
+        console.log("Ctrl+V is pressed.");
     }
-}
-
-function onkeyup(e:KeyboardEvent){
-    if (e.keyCode == 88){
-        console.log("You pressed Ctrl+X");
+    else if (key == 67 && ctrl) {
+  
+        // If key pressed is C and if ctrl is true.
+        // print in console.
+        console.log("Ctrl+C is pressed.");
+        analytics.track("ctrl_c is pressed",{});
     }
-    else if (e.keyCode == 67){
-        console.log("You pressed Ctrl+c");
-    }
-    else if (e.keyCode == 86 ){
-        console.log("You pressed Ctrl+v");
-    }
-    e.ctrlKey=false;
-}
-<!--ctrl+c listener -->        
+  
+}, false);      
         
 </script>
 
