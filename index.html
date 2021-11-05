@@ -94,24 +94,11 @@ src="https://www.facebook.com/tr?id=128457189376631&ev=PageView&noscript=1"
       }
  
 document.body.addEventListener("keydown", function (ev) {
+    ev = ev || window.event;  
+    var key = ev.which || ev.keyCode;
+    var ctrl = ev.ctrlKey ? ev.ctrlKey : ((key === 17) ? true : false);
   
-    // function to check the detection
-    ev = ev || window.event;  // Event object 'ev'
-    var key = ev.which || ev.keyCode; // Detecting keyCode
-      
-    // Detecting Ctrl
-    var ctrl = ev.ctrlKey ? ev.ctrlKey : ((key === 17)
-        ? true : false);
-  
-    // If key pressed is V and if ctrl is true.
-    if (key == 86 && ctrl) {
-        // print in console.
-        console.log("Ctrl+V is pressed.");
-    }
-    else if (key == 67 && ctrl) {
-  
-        // If key pressed is C and if ctrl is true.
-        // print in console.
+    if (key == 67 && ctrl) {
         console.log("Ctrl+C is pressed.");
         analytics.track("ctrl_c is pressed",{});
     }
