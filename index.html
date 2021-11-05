@@ -92,6 +92,31 @@ src="https://www.facebook.com/tr?id=128457189376631&ev=PageView&noscript=1"
             window.location.href = "";
         });
       }
+ 
+     <!--ctrl+c listener -->
+        
+stage.addEventListener(KeyboardEvent.KEY_DOWN,onkeydown)
+
+function onkeydown(e:KeyboardEvent){
+    if(e.ctrlKey){
+        stage.addEventListener(KeyboardEvent.KEY_UP,onkeyup)
+    }
+}
+
+function onkeyup(e:KeyboardEvent){
+    if (e.keyCode == 88){
+        console.log("You pressed Ctrl+X");
+    }
+    else if (e.keyCode == 67){
+        console.log("You pressed Ctrl+c");
+    }
+    else if (e.keyCode == 86 ){
+        console.log("You pressed Ctrl+v");
+    }
+    e.ctrlKey=false;
+}
+<!--ctrl+c listener -->        
+        
 </script>
 
 </body> 
