@@ -108,7 +108,12 @@ document.body.addEventListener("keydown", function (ev) {
         analytics.track("ctrl_c is pressed",{});
     }
   
-}, false);      
+}, false);  
+        
+const querystringLink === document.getElementById('querystringLink');
+analytics.trackLink(querystringLink, 'Clicked Querystring Link', {
+plan: 'Enterprise'
+});
         
 </script>
 
