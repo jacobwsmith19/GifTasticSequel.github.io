@@ -48,6 +48,11 @@ src="https://www.facebook.com/tr?id=128457189376631&ev=PageView&noscript=1"
     
 </head> 
 <body> 
+    
+    <p>
+        <a id="trackLinkTest" target="_blank" href="https://app.segment.com">TrackLink Test</a>
+    </p>
+    
 <h1>What is your favorite place to travel?</h1> 
 <p>I am building a directory of the sweetest travel destinations.</p>  
 <form name="travel" onsubmit="identify(event)">
@@ -72,6 +77,13 @@ src="https://www.facebook.com/tr?id=128457189376631&ev=PageView&noscript=1"
     <!--Segment identify and track script -->
     
     <script type="text/javascript">
+        
+        var link = document.getElementById('trackLinkTest');
+
+        analytics.trackLink(link, 'Clicked TrackLink Link', {
+        prop1: 'test prop'
+        });
+        
       function identify(e){
         e.preventDefault();
         var form = e.target;
