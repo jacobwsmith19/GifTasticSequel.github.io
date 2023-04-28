@@ -1,3 +1,33 @@
-# GifTasticSequel.github.io
+This is the original Draft PR.
 
-https://jacobwsmith19.github.io/GifTasticSequel.github.io/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Updated suggested by PTL.
